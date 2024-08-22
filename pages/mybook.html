@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 20%;
+            background: #ccc;
+            padding: 20px;
+            height: 100%;/* height: 300px; only for demonstration, should be removed */
+        }
+
+        aside {
+            float: right;
+            width: 20%;
+            background: #ccc;
+            padding: 20px;
+            height: 100%;/* height: 300px; only for demonstration, should be removed */
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            /* list-style-type: none; */
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 60%;
+            background-color: #f1f1f1;
+            height: 100%;/* height: 300px; only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Style the footer */
+        footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+        nav, article, aside {
+            width: 100%;
+            height: auto;
+        }
+        }
+    </style>        
+    <title>Sumutal Tech Hub | Training Ground</title>
+</head>
+<body>
+    <header>
+        Sumutal Training Ground
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="programmes.html">Programmes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="mybook.html">Training Ground</a></li>
+                <li><a href="others.html">Others</a></li>
+            </ul>
+            <!-- <img src="sumutallogo.jpg" style="width: 220px; height: 220px">
+            <img src="pc1.jpg" style="width: 220px; height: 220px"> -->
+
+        </nav>
+        <article>
+            <div>
+                <p>Sumutal >> Training Ground Book</p>
+            </div>
+            <div>
+                <form>
+                    <label>Fullname:</label><br>
+                    <input type="text" id="fname" placeholder="Enter your Fullname" autofocus/><br>
+                    <label>E-mail:</label><br>
+                    <input type="email" id="email"/><br>
+                    <label>Gender:</label><br>
+                    <select>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select><br>
+                    <input type="text" multiple="true">
+                    <br>
+                    <label>Message</label><br>
+                    <input type="text" id="message"/><br>
+                    
+                    <hr>
+                    Enter a date before 1980-01-01:
+                    <input type="date" name="bday" max="1979-12-31"><br>
+                    Enter a date after 2000-01-01:
+                    <input type="date" name="bday" min="2000-01-02"><br>
+                    <br>
+                    <input type="file" name="mfile">
+                    <br>
+                    <label>Enter DOB:</label>
+                    <input type="month" >
+                    <br>
+                    Quantity:
+                        <input type="number" name="points" min="0" max="100" step="10" value="30">
+                        <br>
+                    Enter Range
+                        <input type="range" name="points" min="0" max="10"><br>
+                    Search Google:
+                        <input type="search" name="googlesearch"><br>
+                    Telephone:
+                        <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+                    Select a time:
+                        <input type="time" name="usr_time"><br>
+                    Add your homepage:
+                        <input type="url" name="homepage"><br>
+                    Select a week:
+                        <input type="week" name="week_year">
+                    <br>
+                    First name:<br>
+                        <input type="text" name="firstname" value="John" disabled><br>
+                    <br>
+                    <hr>
+                    Select Part:
+                    <select>
+                        <option>Keyboard</option>
+                        <option>Mouse</option>
+                        <option>System Unit</option>
+                        <option>Monitor</option>
+                    </select>
+                    <br>
+                    <br>
+                    Another method for list:
+                    <input list="mylist">
+                        <datalist id="mylist">
+                            <option value="HTML">
+                            <option value="CSS">
+                            <option value="JavaScript">
+                            <option value="Python">
+                            <option value="django">
+                        </datalist>
+                </form>
+            </div>
+        </article>
+        <aside>
+            <div>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="programmes.html">Programmes</a></p>
+                <p><a href="contact.html">Contact Us</a></p>
+            </div>
+        </aside>
+    </section>
+    <footer>
+        <p>Design By: SacTech Trainer: Copyright (c) Sumutal Tech Hub, 2024</p>
+    </footer>    
+</body>
+</html>
